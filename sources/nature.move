@@ -24,12 +24,12 @@ fun init(witness: NATURE, ctx: &mut TxContext) {
 }
 
 /// mint fungible token
-public entry fun mint(treasuryCap: &mut TreasuryCap<JAGUAR>, amount: u64, recipient: address, ctx: &mut TxContext) {
+public entry fun mint(treasuryCap: &mut TreasuryCap<NATURE>, amount: u64, recipient: address, ctx: &mut TxContext) {
     coin::mint_and_transfer(treasuryCap, amount, recipient, ctx);
 }
 
 /// burn fungible tokens
-public entry fun burn(trasuryCap: &mut TreasuryCap<JAGUAR>, coin: Coin<JAGUAR>) {
+public entry fun burn(trasuryCap: &mut TreasuryCap<NATURE>, coin: Coin<NATURE>) {
     coin::burn(trasuryCap, coin);
 }
 
